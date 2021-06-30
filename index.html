@@ -12,15 +12,16 @@
 
       };
 
-    
 
       /* EXERCISE 2
       Write a function for changing the class of the title of the page in "myHeading".
       */
 
       const addClassToTitle = function () {
-        let newClass = 
+        const changeClass = document.querySelector('h1')
+        h1s.classList.add('myHeading')
       };
+addClassToTitle()
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
@@ -28,6 +29,7 @@
 
       const changePcontent = function () {
         document.querySelectorAll('div p')
+        
       };
 
       /* EXERCISE 4
@@ -99,6 +101,7 @@
 
       window.onload = function () {
         changeTitle('another title')
+        addClassToTitle()
       };
 
       /* EXERCISE 13
