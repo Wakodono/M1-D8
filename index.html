@@ -28,17 +28,24 @@ addClassToTitle()
       */
 
       const changePcontent = function () {
-        document.querySelectorAll('div p')
-        
+        const divParagraphs = document.querySelectorAll('div p')
+        divParagraphs.forEach((p) => {
+            p.innerText = 'These children have different text now'
+        })
       };
+changePcontent()
 
       /* EXERCISE 4
       Write a function for changing the destination of every link to https://www.google.com
       */
 
       const changeUrls = function () {
-        querySelectorAll()
+       const allLinks = querySelectorAll('a')
+       allLinks.forEach((a) => {
+        a.href = 'https://www.google.com'
+       }) 
       };
+changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new item in the second list.
