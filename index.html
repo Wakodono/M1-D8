@@ -6,10 +6,8 @@
       */
 
       const changeTitle = function (newTitle) {
-       let h1s = document.getElementsByTagName('h1')
-       console.log(h1s)
-       h1s[0].innerHTML = newTitle
-
+        const title = document.querySelector("h1");
+        title.innerText = newTitle;
       };
 
 
@@ -21,7 +19,6 @@
         const changeClass = document.querySelector('h1')
         h1s.classList.add('myHeading')
       };
-addClassToTitle()
 
       /* EXERCISE 3
       Write a function for changing the text of only the p which are children of a div.
@@ -33,7 +30,6 @@ addClassToTitle()
             p.innerText = 'These children have different text now'
         })
       };
-changePcontent()
 
       /* EXERCISE 4
       Write a function for changing the destination of every link to https://www.google.com
@@ -45,22 +41,23 @@ changePcontent()
         a.href = 'https://www.google.com'
        }) 
       };
-changeUrls()
 
       /* EXERCISE 5
        Write a function for adding a new item in the second list.
        */
 
-      const addToTheSecond = function (content) {
-        //
+      const secondListItem = function (item) {
+        const secondList = document.querySelectorAll("ul")[1];
+        secondList.innerHTML += `<li>${item}</li>`;
       };
 
       /* EXERCISE 6
       Write a function for adding a second paragraph to the div.
       */
 
-      const addParagraph = function (content) {
-        //
+      const addParagraph = function (p) {
+        const div = document.querySelector("div")[0]
+        newParagraph = div.innerHTML += `<p>${p}</p>`
       };
 
       /* EXERCISE 7
