@@ -6,7 +6,7 @@
       */
 
       const changeTitle = function (newTitle) {
-        const title = document.querySelector("h1");
+        let title = document.querySelector("h1");
         title.innerText = newTitle;
       };
 
@@ -16,7 +16,7 @@
       */
 
       const addClassToTitle = function () {
-        const changeClass = document.querySelector('h1')
+        let changeClass = document.querySelector('h1')
         h1s.classList.add('myHeading')
       };
 
@@ -25,7 +25,7 @@
       */
 
       const changePcontent = function () {
-        const divParagraphs = document.querySelectorAll('div p')
+        let divParagraphs = document.querySelectorAll('div p')
         divParagraphs.forEach((p) => {
             p.innerText = 'These children have different text now'
         })
@@ -36,7 +36,7 @@
       */
 
       const changeUrls = function () {
-       const allLinks = querySelectorAll('a')
+       let allLinks = querySelectorAll('a')
        allLinks.forEach((a) => {
         a.href = 'https://www.google.com'
        }) 
@@ -47,7 +47,7 @@
        */
 
       const secondListItem = function (item) {
-        const secondList = document.querySelectorAll("ul")[1];
+        let secondList = document.querySelectorAll("ul")[1];
         secondList.innerHTML += `<li>${item}</li>`;
       };
 
@@ -56,7 +56,7 @@
       */
 
       const addParagraph = function (p) {
-        const div = document.querySelector("div")[0]
+        let div = document.querySelector("div")[0]
         newParagraph = div.innerHTML += `<p>${p}</p>`
       };
 
@@ -65,7 +65,8 @@
       */
 
       const firstUlDisappear = function () {
-        //
+        let ul = document.getElementById("firstList")
+        ul.style.display = "none";
       };
 
       /* EXERCISE 8
@@ -73,7 +74,8 @@
       */
 
       const paintItGreen = function () {
-        //
+        let ulColor = document.querySelectorAll("ul")
+        ulColor.forEach((ul) => { ul.style.color = "green" } )
       };
 
       /* EXERCISE 9
@@ -81,7 +83,10 @@
       */
 
       const makeItClickable = function () {
-        //
+        let clickTitle = document.getElementById("myHeading")
+        clickTitle.addEventListener('click', function(e) {
+          alert('Hey, do not touch my title like that!')
+})
       };
 
       /* EXERCISE 10
@@ -89,7 +94,10 @@
       */
 
       const changeFooterText = function () {
-        //
+        let footer = document.querySelectorAll("footer p")
+        footer.addEventListener('click', function(e) {
+          e.target.innerText = "So first you touch my title, now you're touching my footer too!?";
+})
       };
 
       /* EXERCISE 11
@@ -97,7 +105,9 @@
       */
 
       const inputField = document.getElementById("input-field");
-      // ...
+      document.onkeypress = function (e) {
+        console.log(inputField.value);
+      };
 
       /* EXERCISE 12
       Create a new welcome alert message when the page successfully loads.
